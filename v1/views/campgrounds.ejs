@@ -8,16 +8,16 @@
         <a class="btn btn-lg btn-primary" href="/campgrounds/new">Create a new campground</a>
     </div>
 </header>
-<div class="card-deck">
+<div class="row">
     <% campgrounds.forEach(function(campground){ %>
-        
-           <div class="card" style="width: 18rem;">
+        <div class="col-md-3 col-sm-6">
+        <div class="card">
            <img class="card-img-top" src="<%= campground.image %>">
            <div class="card-body">
            <h2 class="card-title"> <%= campground.name %> </h2>
            </div>
         </div>
-        
+        </div>
     <% }); %>
 </div>
 </div>
