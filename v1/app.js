@@ -8,7 +8,7 @@ app.use(express.static("public"));
 app.set("view engine","ejs");
 
   var campgrounds = [
-        {name: "Tear's Peak", image: "https://pixabay.com/get/e835b20e2bf2013ed1584d05fb1d4e97e07ee3d21cac104496f1c17daeecbdbd_340.jpg"},
+        {name: "Tear's Peak", image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
         {name: "Vast Paradise Canyon", image: "https://farm6.staticflickr.com/5608/15344614880_60b9be5b4f.jpg"},
         {name: "Dwarf's Mountain", image: "https://farm1.staticflickr.com/304/18837745840_a5565e4537.jpg"}
         ];
