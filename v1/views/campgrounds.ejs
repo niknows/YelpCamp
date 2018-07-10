@@ -9,12 +9,12 @@
     </div>
 </header>
 <div class="row">
-<% campgrounds.forEach(function(campground){ %>
-<div class="col-sm">
-<h2> <%= campground.name %> </h2>
-<img src="<%= campground.image %>">
-</div>
-<% }); %>
+    <% campgrounds.forEach(function(campground){ %>
+        <div class="col-md-3 col-sm-6">
+        <h2> <%= campground.name %> </h2>
+        <img src="<%= campground.image %>">
+        </div>
+    <% }); %>
 </div>
 </div>
 
