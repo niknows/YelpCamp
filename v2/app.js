@@ -1,24 +1,52 @@
 /*BASIC SETUP*/
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+var express    = require('express'),
+    app        = express(),
+    bodyParser = require('body-parser'),
+    mongoose   = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine","ejs");
 
-  var campgrounds = [
-        {name: "Tear's Peak", image: "https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
-        {name: "Vast Paradise Canyon", image: "https://farm6.staticflickr.com/5608/15344614880_60b9be5b4f.jpg"},
-        {name: "Dwarf's Mountain", image: "https://farm1.staticflickr.com/304/18837745840_a5565e4537.jpg"}
-        ];
-        
+// SCHEMA SETUP
+var campgroundSchema = new mongoose.Schema({
+   name: String,
+   image: String
+});
+
+var Campground = mongoose.model("Campground", campgroundSchema) ;
+
+// var newCampground = new Campground({
+    
+//   name: "Vast Paradise Canyon",
+//   image: "https://farm6.staticflickr.com/5608/15344614880_60b9be5b4f.jpg"
+   
+// });
+
+// newCampground.save(function(err,campground){
+//     if(err){
+//         console.log("Something went wrong");
+//     } else{
+//         console.log("Success!!");
+//         console.log(campground);
+//     }
+// });
+
 /*ROUTES*/
 app.get("/",function(req,res){
     res.render("landing");
 });
 app.get("/campgrounds", function(req,res){
-    res.render("campgrounds",{campgrounds:campgrounds});
+    Campground.find({},function(err,allCampgrounds){
+        if(err){
+            console.log("Error");
+        }else{
+            res.render("campgrounds",{campgrounds:allCampgrounds}); 
+        }
+    });
+   
 });
 app.get("/campgrounds/new",function(req,res){
     res.render("new");
