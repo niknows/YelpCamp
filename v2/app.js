@@ -41,7 +41,7 @@ app.get("/",function(req,res){
 app.get("/campgrounds", function(req,res){
     Campground.find({},function(err,allCampgrounds){
         if(err){
-            console.log("Error");
+            console.log("Error...");
         }else{
             res.render("campgrounds",{campgrounds:allCampgrounds}); 
         }
