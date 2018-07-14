@@ -63,12 +63,9 @@ app.post("/campgrounds", function(req,res){
        if(err){
            console.log("Something went wrong");
        } else{
-           console.log("The campground was added to the datavase");
-           console.log(campground);
+        res.redirect("/campgrounds");
        } 
     });
-    res.redirect("/campgrounds");
-    
 });
 
 
