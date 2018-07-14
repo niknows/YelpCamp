@@ -68,6 +68,10 @@ app.post("/campgrounds", function(req,res){
     });
 });
 
+app.get("/campgrounds/:id",function(req,res){
+    res.send("This will be the show page");
+});
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("YelpCamp Server has started...");
