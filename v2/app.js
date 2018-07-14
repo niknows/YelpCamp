@@ -19,6 +19,22 @@ var campgroundSchema = new mongoose.Schema({
 
  var Campground = mongoose.model("Campground", campgroundSchema) ;
 
+//  var newCampground = new Campground({
+    
+//   name: "Snow Montain",
+//   image: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+//   description: "This is a beautiful landscape, a colossus comprised of stone" 
+//  });
+
+//  newCampground.save(function(err,campground){
+//      if(err){
+//          console.log("Something went wrong");
+//      } else{
+//          console.log("Success!!");
+//          console.log(campground);
+//      }
+//  });
+
 /*ROUTES*/
 app.get("/",function(req,res){
     res.render("landing");
@@ -39,10 +55,12 @@ app.get("/campgrounds/new",function(req,res){
 app.post("/campgrounds", function(req,res){
     var name = req.body.name;
     var image = req.body.image;
+    var info = req.body.info;
     //Create a new campground and add it to the database
     var newCampground = new Campground({
         name: name,
-        image: image
+        image: image,
+        description: info
     });
     newCampground.save(function(err,campground){
        if(err){
