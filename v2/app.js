@@ -13,16 +13,17 @@ app.set("view engine","ejs");
 // SCHEMA SETUP
 var campgroundSchema = new mongoose.Schema({
    name: String,
-   image: String
+   image: String,
+   description: String
 });
 
-var Campground = mongoose.model("Campground", campgroundSchema) ;
+ var Campground = mongoose.model("Campground", campgroundSchema) ;
 
 //  var newCampground = new Campground({
     
 //   name: "Snow Montain",
-//   image: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-   
+//   image: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+//   description: "This is a beautiful landscape, a colossus comprised of stone" 
 //  });
 
 //  newCampground.save(function(err,campground){
@@ -69,7 +70,7 @@ app.post("/campgrounds", function(req,res){
 });
 
 app.get("/campgrounds/:id",function(req,res){
-    res.send("This will be the show page");
+    res.render("show");
 });
 
 
