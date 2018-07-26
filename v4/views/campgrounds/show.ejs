@@ -3,6 +3,9 @@
     <h1 class="display-3 mt-5"><%= campground.name %></h1>
     <img class="img-fluid" src="<%= campground.image %>">
     <p class="lead mt-2"><%= campground.description %></p>
+     <p>
+            <a class="btn btn-success"href="/campgrounds/<%= campground._id %>/comments/new">Create new comment</a>
+        </p>
     <h4>Comments:</h4>
     <% campground.comments.forEach(function(comment){ %>
         <p>
