@@ -6,19 +6,19 @@ var data = [
     {
         name: "Mourning Lake",
         image: "https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        description: "A quiet place to stay"
+        description: "Lorem ipsum fermentum diam inceptos placerat conubia curabitur amet, eget etiam per at convallis vivamus phasellus lectus, himenaeos curabitur mattis ullamcorper praesent class eu. potenti proin sed nisl suspendisse orci odio ornare in, proin donec in senectus fusce feugiat faucibus vel sociosqu, lectus nec mi malesuada interdum ut donec. litora eros ut ultrices vitae porttitor pharetra at per, vehicula aptent a adipiscing arcu erat sodales lectus aliquet, dui et volutpat dui ac suscipit etiam. vitae nam convallis ornare porttitor sem ornare sit elementum at odio venenatis, torquent class lacus nullam risus sollicitudin maecenas eget urna ultricies. "
         
     },
     {
         name: "Krishna's Mouth",
         image: "https://images.pexels.com/photos/45241/tent-camp-night-star-45241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        description: "An invitation to gaze the stars"
+        description: "Lorem ipsum fermentum diam inceptos placerat conubia curabitur amet, eget etiam per at convallis vivamus phasellus lectus, himenaeos curabitur mattis ullamcorper praesent class eu. potenti proin sed nisl suspendisse orci odio ornare in, proin donec in senectus fusce feugiat faucibus vel sociosqu, lectus nec mi malesuada interdum ut donec. litora eros ut ultrices vitae porttitor pharetra at per, vehicula aptent a adipiscing arcu erat sodales lectus aliquet, dui et volutpat dui ac suscipit etiam. vitae nam convallis ornare porttitor sem ornare sit elementum at odio venenatis, torquent class lacus nullam risus sollicitudin maecenas eget urna ultricies. "
         
     },
     {
         name: "Greeny Maze",
         image: "https://images.pexels.com/photos/6714/light-forest-trees-morning.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        description: "Beware not to get lost"
+        description: "Lorem ipsum fermentum diam inceptos placerat conubia curabitur amet, eget etiam per at convallis vivamus phasellus lectus, himenaeos curabitur mattis ullamcorper praesent class eu. potenti proin sed nisl suspendisse orci odio ornare in, proin donec in senectus fusce feugiat faucibus vel sociosqu, lectus nec mi malesuada interdum ut donec. litora eros ut ultrices vitae porttitor pharetra at per, vehicula aptent a adipiscing arcu erat sodales lectus aliquet, dui et volutpat dui ac suscipit etiam. vitae nam convallis ornare porttitor sem ornare sit elementum at odio venenatis, torquent class lacus nullam risus sollicitudin maecenas eget urna ultricies. "
         
     } 
 ];
