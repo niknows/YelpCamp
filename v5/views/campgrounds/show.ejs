@@ -1,5 +1,5 @@
 <% include ../partials/header %>
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="col-md-3">
             <p class="lead">YelpCamp</p>
@@ -25,7 +25,7 @@
                   <div class="text-right">
                   <a class="btn btn-success"href="/campgrounds/<%= campground._id %>/comments/new">Create new comment</a>
                   </div>
-                  <div class="mt-4">
+                  <hr>
                   <% campground.comments.forEach(function(comment){ %>
                     <div class="row">
                         <div class="col-md-12">
@@ -35,7 +35,6 @@
                         </div>
                     </div>
                   <% }); %>
-                 </div>
                 </div>
             </div>
             
