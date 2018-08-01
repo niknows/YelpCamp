@@ -20,6 +20,21 @@ app.set("view engine","ejs");
 //SEED FILE
 seedDB();
 
+//PASSPORT CONFIG
+app.use(require("express-session")({
+    secret: "A secret is a secret",
+    resave: false,
+    saveUninitialized: false
+    
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+
 // ===========================
 //  CAMPGROUND'S ROUTES
 // ===========================
