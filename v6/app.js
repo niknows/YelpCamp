@@ -137,8 +137,10 @@ app.post("/campgrounds/:id/comments",function(req,res){
 app.get("/register",function(req,res){
    res.render("register"); 
 });
+//register form logic
 app.post("/register",function(req,res){
-    
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password);
 });
 
 
