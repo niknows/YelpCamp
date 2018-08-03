@@ -44,7 +44,7 @@ app.get("/", function(req,res){
 });
 
 //INDEX
-app.get("/campgrounds", isLoggedIn, function(req,res){
+app.get("/campgrounds", function(req,res){
     Campground.find({},function(err,allCampgrounds){
         if(err){
             console.log("Error");
@@ -96,7 +96,7 @@ app.get("/campgrounds/:id", function(req,res){
 // ===========================
 
 //NEW
-app.get("/campgrounds/:id/comments/new", function(req,res){
+app.get("/campgrounds/:id/comments/new", isLoggedIn, function(req,res){
     Campground.findById(req.params.id, function(err,foundCampground){
         if(err){
             console.log(err);
