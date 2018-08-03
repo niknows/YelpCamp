@@ -163,7 +163,11 @@ app.post("/login",passport.authenticate("local",
     }), function(req,res){
 });
 
-
+//logout
+app.get("/logout",function(req,res){
+    req.logout();
+    res.redirect("/campgrounds");
+});
 
 
 
