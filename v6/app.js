@@ -33,6 +33,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+//currentUser available to all routes
 app.use(function(req,res,next){
    res.locals.currentUser = req.user; 
    next();
