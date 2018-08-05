@@ -10,12 +10,6 @@ function isLoggedIn(req,res,next){
     res.redirect("/login");
 }
 
-// ===========================
-//  COMMENTS' ROUTES
-// ===========================
-
-
-
 //NEW
 router.get("/campgrounds/:id/comments/new", isLoggedIn, function(req,res){
     Campground.findById(req.params.id, function(err,foundCampground){
