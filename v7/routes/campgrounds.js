@@ -2,11 +2,6 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
 
-
-
-// ===========================
-//  CAMPGROUND'S ROUTES
-// ===========================
 //INDEX
 router.get("/", function(req,res){
     Campground.find({},function(err,allCampgrounds){

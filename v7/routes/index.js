@@ -8,10 +8,6 @@ router.get("/", function(req,res){
     res.render("landing");
 });
 
-// ===========================
-//  AUTH ROUTES
-// ===========================
-
 //register form
 router.get("/register", function(req,res){
    res.render("register"); 
@@ -48,6 +44,7 @@ router.get("/logout", function(req,res){
     res.redirect("/");
 });
 
+//middleware
 function isLoggedIn(req,res,next){
     if(req.isAuthenticated()){
         return next();
