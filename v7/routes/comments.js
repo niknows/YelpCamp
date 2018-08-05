@@ -1,5 +1,14 @@
 var express = require("express");
 var router = express.Router();
+var Campground = require("../models/campground");
+var Comment = require("../models/comment");
+
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 // ===========================
 //  COMMENTS' ROUTES
