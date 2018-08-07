@@ -30,6 +30,7 @@ router.post("/", isLoggedIn, function(req,res){
             console.log(err);
             res.redirect("/campgrounds");
         } else {
+            console.log("New comment's username will be:" + req.user.username);
             Comment.create(req.body.comment, function(err,comment){
                if(err){
                    console.log(err);
