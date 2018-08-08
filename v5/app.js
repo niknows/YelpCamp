@@ -9,7 +9,7 @@ var express    = require('express'),
     Comment    = require('./models/comment'),
     seedDB     = require('./seeds');
 
-mongoose.connect('mongodb://localhost:27017/yelp_camp_v4', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/yelp_camp_v5', { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.set("view engine","ejs");
