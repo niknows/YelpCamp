@@ -1,4 +1,4 @@
 <h1>YelpCamp</h1>
-YelpCamp Bootcamp Project
+<p>YelpCamp Bootcamp Project</p>
 
 
