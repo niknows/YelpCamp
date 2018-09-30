@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine","ejs");
 
-// SCHEMA SETUP
+// Schema setup
 var campgroundSchema = new mongoose.Schema({
    name: String,
    image: String,
