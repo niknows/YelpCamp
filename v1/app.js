@@ -13,7 +13,7 @@ app.set("view engine","ejs");
         {name: "Dwarf's Mountain", image: "https://farm1.staticflickr.com/304/18837745840_a5565e4537.jpg"}
         ];
         
-/*ROUTES*/
+/*Routes*/
 app.get("/",function(req,res){
     res.render("landing");
 });
